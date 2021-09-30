@@ -1,0 +1,16 @@
+---
+hostname: spine1
+mgmt_ip: 192.168.0.10/24
+interfaces:
+  Ethernet2:
+    ip_address: 10.0.0.0/31
+    mtu: 9416
+  Ethernet3:
+    ip_address: 10.0.0.2/31
+    mtu: 9416
+  Ethernet4:
+    ip_address: 10.0.0.4/31
+    mtu: 9416
+  Ethernet5:
+    ip_address: 10.0.0.6/31
+    mtu: 9416

@@ -1,0 +1,12 @@
+# group_vars/ATD_NETWORK.yml
+
+---
+mgmt_vrf: MGMT
+dns_servers: [8.8.8.8, 192.168.0.5]
+ntp_servers: [time.google.com]
+domain_name: example.com
+radius_servers:
+  - 192.168.0.5
+  - 192.168.0.6
+tacacs_servers: [192.168.0.5, 192.168.0.6]
+syslog_servers: [192.168.0.100]

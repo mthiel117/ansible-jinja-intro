@@ -1,0 +1,10 @@
+---
+hostname: leaf3
+mgmt_ip: 192.168.0.14/24
+interfaces:
+  Ethernet2:
+    ip_address: 10.0.0.5/31
+    mtu: 9416
+  Ethernet3:
+    ip_address: 10.0.0.13/31
+    mtu: 9416

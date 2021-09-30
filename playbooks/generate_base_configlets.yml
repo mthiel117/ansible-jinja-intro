@@ -1,0 +1,10 @@
+---
+- name: Create Base Configlets
+  hosts: ATD_NETWORK # group for all spines and leafs
+
+  tasks:
+
+    # Create Base Configs
+  - name: Create Base Configlets
+    template: src=../templates/base-mgmt.j2 dest=../configlets/{{ inventory_hostname }}-Base.cfg
+    delegate_to: localhost
