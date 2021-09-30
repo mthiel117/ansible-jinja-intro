@@ -12,7 +12,7 @@ all:
         ansible_user: arista
         ansible_ssh_pass: # update password with "Lab Credentials"
       children:
-        ATD_FABRIC:
+        ATD_NETWORK:
           children:
             ATD_SPINES:
               hosts:
