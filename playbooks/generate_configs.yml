@@ -1,0 +1,7 @@
+---
+# Master Playbook to Generate all Configs
+- import_playbook: generate_base_configlets.yml
+# - import_playbook: generate_MGMT_Leaf_configs.yml
+# - import_playbook: generate_PROD_Spine_configs.yml
+# - import_playbook: generate_PROD_DCI_configs.yml
+# - import_playbook: generate_PROD_Border_configs.yml
