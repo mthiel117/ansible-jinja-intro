@@ -1,0 +1,36 @@
+---
+all:
+  children:
+    cv_servers:
+      hosts:
+        cv_atd1:
+          ansible_host: 192.168.0.5
+          ansible_user: arista
+          ansible_password: # update password with "Lab Credentials"
+    ATD_LAB:
+      vars:
+        ansible_user: arista
+        ansible_ssh_pass: # update password with "Lab Credentials"
+      children:
+        ATD_FABRIC:
+          children:
+            ATD_SPINES:
+              hosts:
+                spine1:
+                  ansible_host: 192.168.0.10
+                spine2:
+                  ansible_host: 192.168.0.11
+            ATD_LEAFS:
+              children:
+                pod1:
+                  hosts:
+                    leaf1:
+                      ansible_host: 192.168.0.12
+                    leaf2:
+                      ansible_host: 192.168.0.13
+                pod2:
+                  hosts:
+                    leaf3:
+                      ansible_host: 192.168.0.14
+                    leaf4:
+                      ansible_host: 192.168.0.15
