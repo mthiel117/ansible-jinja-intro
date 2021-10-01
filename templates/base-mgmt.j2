@@ -6,6 +6,7 @@
 hostname {{ inventory_hostname }}
 !
 vrf instance {{ mgmt_vrf }}
+dns domain {{ domain_name }}
 !
 interface Management1
    desc Management
