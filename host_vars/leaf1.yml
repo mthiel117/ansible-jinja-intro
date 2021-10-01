@@ -3,6 +3,7 @@ hostname: leaf1
 mgmt_ip: 192.168.0.12/24
 interfaces:
   Ethernet2:
+    desc: BOGUS
     ip_address: 10.0.0.1/31
     mtu: 9416
   Ethernet3:

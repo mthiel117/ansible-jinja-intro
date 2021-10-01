@@ -1,0 +1,13 @@
+{# templates/interfaces.j2 #}
+!-------------------------------------------------------
+! Interfaces Configlet for {{ inventory_hostname }}
+!-------------------------------------------------------
+!
+{% for interface,params in interfaces.items() %}
+interface {{ interface }}
+   ip address {{ params.ip_address }}
+   mtu {{ params.mtu }}
+{% endfor %}
+
+
+{# ethernet_interface, ethernet_interface_params in interfaces.items() #}

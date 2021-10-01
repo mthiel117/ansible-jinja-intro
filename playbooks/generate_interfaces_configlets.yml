@@ -1,0 +1,11 @@
+# playbooks/generate_base_configlets.yml
+---
+- name: Create Base Configlets
+  hosts: ATD_NETWORK # group for all spines and leafs
+
+  tasks:
+
+    # Create Base Configs
+  - name: Create Base Configlets
+    template: src=../templates/interfaces.j2 dest=../configlets/{{ inventory_hostname }}-Interfaces.cfg
+    delegate_to: localhost
