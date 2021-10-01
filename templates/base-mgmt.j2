@@ -14,7 +14,7 @@ interface Management1
    ip address {{ mgmt_ip }}
 !
 {# Calculate Gateway - 1st address in subnet #}
-ip route vrf {{ mgmt_vrf }} 0.0.0.0/0 {{ mgmt_ip | ipaddr('1') }}
+ip route vrf {{ mgmt_vrf }} 0.0.0.0/0 {{ (mgmt_ip | ipaddr('1')).split('/')[0] }}
 !
 no ip routing vrf {{ mgmt_vrf }}
 !
